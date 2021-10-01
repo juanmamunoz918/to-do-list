@@ -1,0 +1,18 @@
+{
+    "name": "jmm/todolist",
+    "description": "A To Do List Web App",
+    "autoload": {
+        "psr-4": {
+            "Model\\":"./Models",
+            "MVC\\":"./",
+            "Controllers\\":"./Controllers"
+        }
+    },
+    "authors": [
+        {
+            "name": "Juan Martin",
+            "email": "juanmamunoz289@gmail.com"
+        }
+    ],
+    "require": {}
+}
