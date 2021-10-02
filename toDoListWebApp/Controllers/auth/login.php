@@ -10,11 +10,11 @@ function auth($args){
     if(empty($errores)){
         $result= $admin->existeuser();
         if(!$result){
-            $errores=Admin::getErrores();
+            $errores=Admin::getErrors();
         }else{
             $autenticacion= $admin->passwordCorrecto($result);
             if(!$autenticacion){
-                $errores= Admin::getErrores();
+                $errores= Admin::getErrors();
             }else{
                 $errores=null;
             }
