@@ -6,7 +6,7 @@ function viewActivity($args){
     if($args["id"]!=""){
         $activity= Activity::findId($args["id"]);
     }
-    return json_encode($activity);
+    return $activity;
 }
 
 

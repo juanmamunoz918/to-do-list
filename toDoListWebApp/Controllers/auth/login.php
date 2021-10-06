@@ -6,24 +6,24 @@ use Model\Admin;
 
 function auth($args){
     $admin = new Admin($args);
-    $errores= $admin->validate();
-    if(empty($errores)){
+    $errors= $admin->validate();
+    if(empty($errors)){
         $result= $admin->existeuser();
         if(!$result){
-            $errores=Admin::getErrores();
+            $errors=Admin::getErrors();
         }else{
             $autenticacion= $admin->passwordCorrecto($result);
             if(!$autenticacion){
-                $errores= Admin::getErrores();
+                $errors= Admin::getErrors();
             }else{
-                $errores=null;
+                $errors=null;
             }
         }
     }else{
-        $errores=null;
+        $errors=null;
     }
 
-    return json_encode($errores);
+    return $errors;
     
 }
 
