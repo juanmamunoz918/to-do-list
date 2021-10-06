@@ -1,7 +1,5 @@
 <?php 
 
-
-
 use Model\Admin;
 
 function auth($args){
